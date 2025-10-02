@@ -61,7 +61,7 @@ def addItem(name, price, qty):
 def viewCart(name, price, qty):
     print("--------------------")
     for i in range(len(name)):
-        print(f"Item: {name[i]}, total price: {price[i] * qty[i]}")
+        print(f"Item: {name[i]}, total price: {(price[i] * qty[i]):.2f}")
 
     print("--------------------")
 
@@ -83,8 +83,6 @@ def computeSubtotal(name, price, qty):
 
     for i in range(len(price)):
         totalPrice = (price[i] * qty[i]) + totalPrice
-
-    print("Test subtotal: ", totalPrice)
 
     return totalPrice
 
@@ -110,13 +108,13 @@ def checkout(name, price, qty, rate):
     print("RECIPT: ")
     for i in range(len(name)):
         print(f"Item: {name[i]}\nQuantity: {qty[i]}")
-        print(f"Unit Price: {price[i]}\nTotal Price: {price[i] * qty[i]}")
+        print(f"Unit Price: {price[i]:.2f}\nTotal Price: {(price[i] * qty[i]):.2f}")
         print("--------------------")
 
-    print(f"Subtotal: {beforeTax}")
-    print(f"Tax: {tax}")
-    print(f"Savings: {savings}")
-    print(f"Final Price: {finalTotal}")
+    print(f"Subtotal: {beforeTax:.2f}")
+    print(f"Tax: {tax:.2f}")
+    print(f"Savings: {savings:.2f}")
+    print(f"Final Price: {finalTotal:.2f}")
     print("Thank you for your purchase!")
     print("--------------------")
     print("--------------------")
