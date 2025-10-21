@@ -44,6 +44,8 @@ void pop(List *list, int index){
         free(temp);
         temp = NULL;
         --(list->length);
+        list->head = NULL;
+        list->tail = NULL;
         return;
     }
 
