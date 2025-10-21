@@ -1,5 +1,4 @@
 #ifndef linked_list
-
 #define linked_list
 
 typedef struct Node{
